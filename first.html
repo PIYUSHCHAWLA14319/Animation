@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Animated website</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;}
+
+.header{
+width:100%;
+height:100vh;
+background-image:linear-gradient(rgba(5,0,137,0.6),rgba(5,0,137,0.6)),url(image/back.png);
+background-position:center;
+background-size:cover;
+overflow:hidden;}
+
+nav{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+transition:background 1s;}
+
+nav .logo{
+display:flex;
+align-items:center;
+font-size:26px;
+font-weight:600;
+color:#fff;}
+
+nav .logo img{
+width:60px;
+margin-right:10px;}
+
+nav ul li{
+display:inline-block;
+list-style:none;
+margin:10px 20px;}
+
+nav ul li a{
+text-decoration:none;
+color:#fff;
+font-weight:500;}
+
+nav:hover{
+background:#fff;}
+
+nav:hover .logo{
+color:#333;}
+
+nav:hover ul li a{
+color:#333;}
+
+
+.content{
+margin-top:9%;
+margin-left:9%;
+color:#fff;}
+
+.content h1{
+font-size:120px;
+line-height:120px;
+font-weight:600;}
+
+.content p{
+max-width:500px;
+line-height:28px;
+opacity:0;}
+
+.links{
+margin-top:30px;
+opacity:0;}
+
+.links a{
+color:#fff;
+text-decoration:none;
+display:inline-block;}
+
+.btn{
+padding:10px 35px;
+border:2px solid #fff;
+border-radius:35px;
+margin-right:15px;
+}
+
+.slide-left{
+animation:slide-left 1s linear forwards;
+}
+
+@keyframes slide-left{
+   0%{
+          transform:translate(100px);
+            opacity:0;
+         }
+     100%{
+          transform:translate(0px);
+            opacity:1;
+         }
+
+
+}
+
+p.slide-left{
+animation-delay:1s;
+}
+.links.slide-left{
+animation-delay: 2s;
+}
+
+@media only screen and (max-width:480px){
+nav{
+flex-direction:column;}
+
+nav .logo{
+font-size:35px;
+text-shadow:0px 4px 2.5px red;}
+
+nav ul li a{
+color:red;
+text-align:center;
+font-size:10px;
+}
+
+nav  a:hover{
+font-size:25px;}
+
+
+
+.content h1{
+font-size:100px;
+line-height:80px;
+font-weight:300;
+}
+
+.content p{
+font-size:40px;
+line-height:35px;
+margin-top:20px;}
+
+.btn{
+padding:10px 17px;
+border:2px solid #fff;
+border-radius:5px;
+font-size:25px;
+}
+.vtn{
+border:2px solid red;
+font-size:20px;
+padding:10px 17px;
+border-radius:10px;}
+
+
+.btn:hover{
+background:transparent;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="header">
+<nav>
+<div class="logo">
+<img src="image/logo.png">
+<span>Wearme</span>
+</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Features</a></li>
+<li><a href="#">Fitness</a></li>
+<li><a href="#">Connectivity</a></li>
+<li><a href="#">Support</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<h1 class="slide-left">The<br> Future</h1>
+<p class="slide-left">This is the First smartwatch from our company. We're make a huge collection of watches in all getegories.</p>
+<div class="links slide-left">
+<a href="#" class="btn">Learn More</a>
+<a href="#"class="vtn">Or Contact</a>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
